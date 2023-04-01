@@ -1,9 +1,5 @@
 function solution(my_str, n) {
-    let strArr = my_str.split("");
-    let arr = [];
-    
-    while(strArr.length>0) {
-        arr.push(strArr.splice(0,n).join(""))
-    }
-    return arr
+    let res = [];
+    for (let i = 0; i < my_str.length; i+=n) res.push(my_str.slice(i, i+n));
+    return res;
 }
